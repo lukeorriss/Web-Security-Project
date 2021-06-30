@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Imported Styling Elements -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/5658b3f3d2.js" crossorigin="anonymous"></script>
+
+    <!-- Local Styling Elements -->
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/main.css" />
+    <!-- Favicon Image -->
+    <link rel="icon" href="/static/images/SGF.png" type="icon/png">
+    <title>Some Gaming Forum</title>
+  </head>
+  <body>
+
+    <!-- Header and Login/Reg Buttons -->
+    <div class="uppernav">
+      <div class="logo">
+        <a href="/">
+        <img src="/static/images/SGF.png" alt=""></a>
+      </div>
+      <div class="mainheader">
+        <a href="/">
+        <h1>Some Gaming Forum</h1></a>
+      </div>
+
+      <!-- Login Forum -->
+      
+      {% if loggedin %}
+      <div class="loginreg">
+        <ul>
+          <li><a>Hello, {{ username }} </a></li>
+          <a href="/logout/"><li class="coloured">Logout</li></a>
+        </ul>
+        
+      </div>
+      {% else %}
+      <div class="loginreg">
+        <ul>
+          <li><a href="/login/">Login</a></li>
+          <a href="/registration/"><li class="coloured">Sign Up!</li></a>
+        </ul>
+      </div>
+    {% endif %}
+    </div>
+    
+  
+
+    
+    
+    
+
+    <!-- New Post, Search and Navigation Bar -->
+    <div class="nav">
+      
+      <div class="searchholder">
+        <div class="searchbutton">
+          <form action="/search/" method="GET" class="searchbarfull">
+          <input class="searchinput" type="text" name="s" placeholder="Search...">
+          <div class="search" type="button"></div></form>
+        </div>
+      </div>
+    
+      <div class="banner">
+          <ul class="ulbanner">
+              <a href="/" class="bannerhighlight"><li class="libanner nmbanner">Home</li></a>
+              <a href="/" class="bannerhighlight"><li class="libanner nmbanner">Top Posts</li></a>
+              <a href="/" class="bannerhighlight"><li class="libanner nmbanner">Recent Posts</li></a>
+              <a href="/{{ username }}/" class="bannerhighlight"><li class="libanner nmbanner">My Posts</li></a>
+          </ul>
+      </div>
+
+      <div class="random">
+        <ul class="ulbanner">
+          <a href="/post/"><li class="libanner">New Post</li></a>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="othercontent">
+      {% block content %}       {% endblock %}
+      {% block indexpage %}     {% endblock %}
+      {% block login %}         {% endblock %}
+      {% block registration %}  {% endblock %}
+      {% block registrationfail %} {% endblock %}
+      {% block searchfail %}    {% endblock %}
+      {% block search %}        {% endblock %}
+      {% block newpost %}       {% endblock %}
+      {% block loginfail %}     {% endblock %}
+      {% block noemail %}       {% endblock %}
+      {% block recent %}        {% endblock %}
+      {% block reset %}         {% endblock %}
+      {% block userposts %}     {% endblock %}
+      {% block regcomplete %}   {% endblock %}
+    </div>
+  
+
+   
+  </body>
+</html>

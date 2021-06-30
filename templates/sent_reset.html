@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/main.css" />
+    <title>Some Gaming Forum</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block reset %}{% endblock %}
+    {% block content %}
+    <div class="loginfail">
+        <h1>Password reset</h1>
+        <p>If that email address is registered with us, we'll send it a password reset link.</p>
+    </div>
+    
+    {% endblock %}
+
+</body>
+</html>

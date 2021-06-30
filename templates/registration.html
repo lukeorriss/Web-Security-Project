@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="/static/main.css" />
+    <title>Some Gaming Forum</title>
+</head>
+<body>
+    
+    {% extends 'base.html' %}
+    {% block registration %}{% endblock %}
+    {% block content %}
+    
+    
+    <div class="loginarea">
+        <div class="loginfail">
+            {% block registrationfail %}    {% endblock %}
+        </div>
+
+        <div class="logintitle">
+            <h1>Create an Account</h1>
+        </div>
+        <form method="POST" action="/registration/" class="loginform">
+            <!-- <input type="number" name="userid" id="userid" placeholder="User ID"></p> -->
+            <input class="inputbox" type="text" name="fname" id="fname" placeholder="Full Name" required></p>
+            <input class="inputbox" type="email" name="email" id="email" placeholder="Email" required></p>
+            <input class="inputbox" name="username" id="username" maxlength="32" placeholder="Username" required/></p>
+            <input class="inputbox" name="password" id="password" maxlength="32" type="password" placeholder="Password" required/></p>
+            <input class="inputbox" name="confirmpassword" id="confirmpassword" maxlength="32" type="password" placeholder="Confirm Password" required/></p>
+            
+            <p class="captchadesc">Type the characters that appear below (Case Sensitive).</p>
+            <div class="rendercap">
+                <p>{{ captcha }}</p>
+            </div>
+            <input class="inputbox" name="captcha" id="captcha" maxlength="32" placeholder="Prove you're not a robot" required/></p>
+            
+            <p><input class="cred" type="submit" id="submitbutton" name="login" value="Sign Up" /></p>
+        </form>
+        <a href="/login/" id="resetcred">Already a user? Sign in.</a>
+        
+        
+    </div>
+
+
+    
+    {% endblock %}
+</body>
+</html>

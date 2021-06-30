@@ -1,0 +1,12 @@
+.userposts {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+}
+
+.hidemesession {
+    // display: none; 
+    visibility: hidden;
+}

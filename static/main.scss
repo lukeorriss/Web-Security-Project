@@ -1,0 +1,212 @@
+
+
+// font-family: 'Montserrat', sans-serif;
+@font-face {
+    font-family: 'Longhaul';
+    src: url(./Longhaul.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("/static/images/background.jpg");
+    height: 100vh;
+    background-repeat: repeat-y;
+    background-size: cover;
+    filter: brightness(100%);
+}
+.uppernav {
+    width: 100%;
+    max-width: 1000px;
+    height: 80px;
+    max-height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px auto;
+    align-items: center;
+
+}
+.logo {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.logo img {
+   max-width: 100%;
+   position: relative;
+   
+}
+.mainheader {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.mainheader a {
+    text-decoration: none;
+}
+.mainheader h1 {
+    color: white;
+    display: flex;
+    font-family: 'Longhaul';
+    font-size: 43px;
+    letter-spacing: 5px;
+    pointer-events: none;
+    text-decoration: none;
+}
+.loginreg {
+    width: 25%;
+}
+.loginreg ul {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.loginreg ul li {
+    list-style: none;
+    margin: auto 10px;
+}
+.loginreg ul a {
+    color: white;
+    text-decoration: none;
+    display: flex; 
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+    text-align: center;
+}
+.coloured {
+    background-color: rgb(40, 172, 0);
+    padding: 10px;
+    border-radius: 10px;
+    transition: all .4s ease;
+}
+.coloured:hover {
+    background-color: rgba(27, 117, 0, 0.486);
+    transition: all .4s ease;
+    cursor: pointer;
+}
+.nav {
+    width: 100%;
+    max-width: 1000px;
+    max-height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+    height: 45px;
+}
+.random {
+    width: 10%;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    transition: all .4s ease;
+}
+.random ul a {
+    background-color: rgb(172,0,0);
+    border-radius: 10px;
+}
+.random ul a:hover {
+    background-color: rgba(172, 0, 0, 0.486);
+    cursor: pointer;
+    transition: all .4s ease;
+    // border: 1px solid white;
+}
+.banner {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    width: 60%;
+    
+    border-radius: 10px;
+    height: 100%;
+    
+}
+.ulbanner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+
+.ulbanner a{
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    transition: all .4s ease;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+.bannerhighlight {
+    background: rgb(54, 54, 54);
+}
+.bannerhighlight:nth-child(1) {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.bannerhighlight:nth-last-child(1) {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.ulbanner a:hover {
+    background-color: rgba(54, 54, 54, 0.493);
+}
+.libanner {
+    list-style: none;
+}
+.searchholder {
+    width: 20%;
+    height: 100%;
+    position: relative;
+}
+
+.othercontent {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+
+::-webkit-scrollbar {
+width: 10px;
+}
+::-webkit-scrollbar-track {
+background: #202020;
+}
+::-webkit-scrollbar-thumb {
+background: rgb(179, 0, 0);
+}
+::-webkit-scrollbar-thumb:hover {
+background: rgb(100, 0, 0);
+} 
+
+
+
+
+@import "userposts";
+@import "login";
+@import "homepage";
+@import "search";
+@import "loginerror";
+@import "index";
+@import "newpost";
+@import "loginfail";

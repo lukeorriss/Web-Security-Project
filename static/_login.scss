@@ -1,0 +1,133 @@
+.logintitle {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logintitle h1 {
+    color: white;
+}
+.loginform {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px auto;
+}
+#loginuser {
+    margin-right: 20px;
+}
+#submitbutton {
+    border: 0px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: all .4s ease;
+
+}
+#submitbutton:hover {
+    background: rgb(149, 0, 0);
+    color: white;
+    transition: all .4s ease;
+    cursor: pointer;
+}
+#resetcred {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    transition: all .4s ease;
+    margin: 10px auto;
+}
+#resetcred:hover {
+    color: rgb(149, 0, 0);
+    transition: all .4s ease;
+}
+
+.inputbox {
+    padding: 15px;
+    margin: 5px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+}
+.inputbox:focus {
+    outline: none;
+}
+
+.loginarea {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+}
+
+
+
+// Reg Complete
+
+.regcomplete {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px auto;
+}
+.regcompletelogin {
+    margin: 10px auto !important;
+    padding: 10px;
+    border-radius: 10px;
+}
+.infotextreg > p {
+    color: white;
+    margin: 10px auto;
+    
+}
+
+
+
+// captcha
+@font-face {
+    font-family: 'Captcha';
+    src: url(./dyslexic.otf);
+}
+
+.captcha {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px auto;
+    padding: 10px;
+}
+.rendercap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    width: 100%;
+    border-radius: 10px;
+}
+.rendercap p {
+    color: blue;
+    font-family: 'Captcha';
+    letter-spacing: 14px;
+    font-size: 50px;
+    text-align: center;
+    pointer-events: none;
+    user-select: none;
+}
+
+.captchadesc {
+    color: white;
+    font-size: 15px;
+    margin: 40px 0 0 0;
+}

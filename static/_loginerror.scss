@@ -1,0 +1,23 @@
+.loginfail {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.loginfail h1, .loginfail p {
+    color: white;
+    margin: 15px;
+}
+
+#backbutton {
+    color: rgb(179,0,0);
+    font-size: 50px;
+    margin: 10px;
+    transition: all .4s ease;
+}
+#backbutton:hover {
+    color: rgba(179, 0, 0, 0.445);
+    transition: all .4s ease;
+}

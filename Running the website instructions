@@ -1,0 +1,7 @@
+In order to run the website please follow the instructions below:
+
+1. Extract the zip file downloaded from Onedrive to a folder
+2. Navigate to the folder through the terminal
+3. Run the 'createdb.py' file using 'python createdb.py'
+4. Run the server using 'python server.py'
+5. Open your browser and nivagate to http://127.0.0.1:5000/ (Address found in terminal)
